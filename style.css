@@ -322,3 +322,55 @@ margin-top:20px;
 color:#d4af37;
 
 }
+<section id="consulta" class="consulta">
+
+<h2>Agende sua Consulta</h2>
+
+<p>
+Preencha seus dados para dar início ao atendimento.
+</p>
+
+<form id="formConsulta">
+
+<input
+type="text"
+id="nome"
+placeholder="Seu nome"
+required>
+
+<input
+type="tel"
+id="telefone"
+placeholder="WhatsApp"
+required>
+
+<input
+type="email"
+id="email"
+placeholder="Seu e-mail"
+required>
+
+<select id="consultaTipo">
+
+<option>Consulta Espiritual Completa - R$97,00</option>
+
+<option>Consulta Amorosa - R$97,00</option>
+
+<option>Consulta Financeira - R$97,00</option>
+
+</select>
+
+<textarea
+id="mensagem"
+placeholder="Conte resumidamente sua dúvida (opcional)">
+</textarea>
+
+<button type="submit" class="botao-principal">
+
+CONTINUAR PARA O WHATSAPP
+
+</button>
+
+</form>
+
+</section>
