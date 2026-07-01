@@ -294,3 +294,31 @@ box-shadow:0 0 40px rgba(212,175,55,.25);
 
 }
 }
+.depoimentos{
+
+padding:120px 8%;
+text-align:center;
+
+}
+
+.depoimentos h2{
+
+font-size:42px;
+font-family:'Cinzel',serif;
+color:#d4af37;
+margin-bottom:60px;
+
+}
+
+.depoimentos .card{
+
+text-align:left;
+
+}
+
+.depoimentos h4{
+
+margin-top:20px;
+color:#d4af37;
+
+}
