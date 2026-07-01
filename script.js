@@ -46,3 +46,50 @@ elementos.forEach(item=>{
 window.addEventListener("scroll", revelarElementos);
 
 revelarElementos();
+const formulario = document.getElementById("formConsulta");
+
+if(formulario){
+
+formulario.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const nome=document.getElementById("nome").value;
+
+const telefone=document.getElementById("telefone").value;
+
+const email=document.getElementById("email").value;
+
+const consulta=document.getElementById("consultaTipo").value;
+
+const mensagem=document.getElementById("mensagem").value;
+
+const texto=
+
+`Olá!
+
+Acabei de solicitar uma consulta.
+
+Nome: ${nome}
+
+Telefone: ${telefone}
+
+E-mail: ${email}
+
+Consulta: ${consulta}
+
+Dúvida:
+
+${mensagem}`;
+
+window.open(
+
+`https://wa.me/55SEUNUMERO?text=${encodeURIComponent(texto)}`,
+
+"_blank"
+
+);
+
+});
+
+}
