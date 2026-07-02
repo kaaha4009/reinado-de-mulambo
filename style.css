@@ -332,10 +332,44 @@ color:var(--dourado);
 
 /* Botões */
 
-.btn-principal,
-.menu-btn,
-.btn-whatsapp{
+.btn-principal {
+  background: linear-gradient(135deg, #2e003e, #000);
+  color: #fff;
+  padding: 16px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.35);
+  transition: all 0.3s ease;
+  animation: pulseGlow 2.5s infinite;
+}
+.btn-WhatsApp {
+  background: #25d366;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+.btn-WhatsApp:hover {
+  transform: scale(1.05);
+}.menu-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
 display:inline-flex;
 
 align-items:center;
