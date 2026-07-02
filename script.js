@@ -1,95 +1,138 @@
-// Rolagem suave para links internos
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
+/*=========================================
+REINADO DE MULAMBO
+SCRIPT PREMIUM
+==========================================*/
 
-        const destino = document.querySelector(this.getAttribute('href'));
+// LOADER
 
-        if(destino){
-            destino.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
+window.addEventListener("load", () => {
+
+const loader = document.getElementById("loader");
+
+loader.style.opacity = "0";
+
+setTimeout(() => {
+
+loader.style.display = "none";
+
+},700);
+
 });
 
-// Animação ao rolar a página
-const elementos = document.querySelectorAll('.card, .consulta, .sobre');
+// MENU
 
-function revelarElementos(){
+const header = document.querySelector("header");
 
-    const alturaTela = window.innerHeight;
+window.addEventListener("scroll",()=>{
 
-    elementos.forEach(item=>{
+if(window.scrollY > 50){
 
-        const topo = item.getBoundingClientRect().top;
+header.classList.add("scroll");
 
-        if(topo < alturaTela - 120){
+}else{
 
-            item.style.opacity = "1";
-            item.style.transform = "translateY(0px)";
-
-        }
-
-    });
+header.classList.remove("scroll");
 
 }
 
-elementos.forEach(item=>{
+});
 
-    item.style.opacity="0";
-    item.style.transform="translateY(40px)";
-    item.style.transition=".8s";
+// FAQ
+
+const perguntas = document.querySelectorAll(".faq-question");
+
+perguntas.forEach((pergunta)=>{
+
+pergunta.addEventListener("click",()=>{
+
+const resposta = pergunta.nextElementSibling;
+
+const icone = pergunta.querySelector("i");
+
+if(resposta.style.display==="block"){
+
+resposta.style.display="none";
+
+icone.classList.remove("fa-minus");
+
+icone.classList.add("fa-plus");
+
+}else{
+
+document.querySelectorAll(".faq-answer").forEach(item=>{
+
+item.style.display="none";
 
 });
 
-window.addEventListener("scroll", revelarElementos);
+document.querySelectorAll(".faq-question i").forEach(icon=>{
 
-revelarElementos();
-const formulario = document.getElementById("formConsulta");
+icon.classList.remove("fa-minus");
 
-if(formulario){
+icon.classList.add("fa-plus");
 
-formulario.addEventListener("submit",function(e){
+});
 
-e.preventDefault();
+resposta.style.display="block";
 
-const nome=document.getElementById("nome").value;
+icone.classList.remove("fa-plus");
 
-const telefone=document.getElementById("telefone").value;
+icone.classList.add("fa-minus");
 
-const email=document.getElementById("email").value;
+}
 
-const consulta=document.getElementById("consultaTipo").value;
+});
 
-const mensagem=document.getElementById("mensagem").value;
+});
 
-const texto=
+// ANIMAÇÃO AO ROLAR
 
-`Olá!
+const elementos = document.querySelectorAll(
 
-Acabei de solicitar uma consulta.
-
-Nome: ${nome}
-
-Telefone: ${telefone}
-
-E-mail: ${email}
-
-Consulta: ${consulta}
-
-Dúvida:
-
-${mensagem}`;
-
-window.open(
-
-`https://wa.me/55SEUNUMERO?text=${encodeURIComponent(texto)}`,
-
-"_blank"
+".card,.item-publico,.depoimento,.oferta,.faq-item,.reinado-texto,.reinado-imagem"
 
 );
 
+const aparecer = ()=>{
+
+const topo = window.innerHeight*0.85;
+
+elementos.forEach(el=>{
+
+const posicao = el.getBoundingClientRect().top;
+
+if(posicao < topo){
+
+el.classList.add("mostrar");
+
+}
+
 });
 
 }
+
+window.addEventListener("scroll",aparecer);
+
+aparecer();
+
+// BOTÃO WHATSAPP
+
+const whatsapp = document.querySelector(".whatsapp-float");
+
+let subir=true;
+
+setInterval(()=>{
+
+if(subir){
+
+whatsapp.style.transform="translateY(-6px)";
+
+}else{
+
+whatsapp.style.transform="translateY(0px)";
+
+}
+
+subir=!subir;
+
+},800);
