@@ -1149,7 +1149,43 @@ FOOTER
 footer{
 
 padding:70px 0;
+/*=========================================
+ANIMAÇÕES JS
+==========================================*/
 
+.card,
+.item-publico,
+.depoimento,
+.oferta,
+.faq-item,
+.reinado-texto,
+.reinado-imagem{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:all .8s ease;
+
+}
+
+.mostrar{
+
+opacity:1 !important;
+
+transform:translateY(0) !important;
+
+}
+
+header.scroll{
+
+background:rgba(5,5,5,.96);
+
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+transition:.4s;
+
+}
 text-align:center;
 
 border-top:1px solid rgba(255,255,255,.05);
@@ -1203,5 +1239,46 @@ font-size:.9rem;
 color:#888;
 
 margin-top:30px;
+
+}
+...última seção do CSS...
+
+}
+
+ /*=========================================
+ ANIMAÇÕES JS
+ ==========================================*/
+
+.card,
+.item-publico,
+.depoimento,
+.oferta,
+.faq-item,
+.reinado-texto,
+.reinado-imagem{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:all .8s ease;
+
+}
+
+.mostrar{
+
+opacity:1 !important;
+
+transform:translateY(0) !important;
+
+}
+
+header.scroll{
+
+background:rgba(5,5,5,.96);
+
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+transition:.4s;
 
 }
