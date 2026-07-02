@@ -1376,3 +1376,14 @@ transition:.4s;
   50% { transform: translateX(5%); }
   100% { transform: translateX(-5%); }
 }
+@keyframes surgirTitulo{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
